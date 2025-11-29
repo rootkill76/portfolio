@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Yash Prakash</title>
+    <meta name="description" content="Portfolio projects by Yash Prakash - Java, Spring Boot, and Full Stack Development">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Yash Prakash</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link active">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li>
+                    <a href="files/yashprakashwork.pdf" download class="btn btn-outline">📄 Download Resume</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Hero Section -->
+    <section class="projects-hero">
+        <div class="container">
+            <h1 class="page-title">My Projects</h1>
+            <p class="projects-intro">
+                Here's a collection of projects I've built, showcasing my skills in Java development, Spring Boot, database management, and system design. Each project represents a different aspect of my technical journey.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="project-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="database">Database</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Train Ticket Booking System -->
+                <div class="project-card detailed" data-category="java database">
+                    <div class="project-image">
+                        <div class="image-placeholder"><img src="images/ticket.jpg" alt="Train Ticket Booking System"></div>
+                        <div class="project-overlay">
+                            <div class="overlay-buttons">
+                                <button class="overlay-btn" onclick="openProjectModal('train-booking')">View Details</button>
+                                <a href="https://github.com/rootkill76/Ticket-Booking.git" class="overlay-btn">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Socket Programming</span>
+                            <span class="tag">Concurrency</span>
+                        </div>
+                        <h3>Train Ticket Booking System</h3>
+                        <p>A real-time train ticket booking system built with Java socket programming, featuring concurrent user handling and data synchronization.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Real-time client-server architecture</li>
+                                <li>Concurrent user request handling</li>
+                                <li>Data synchronization mechanisms</li>
+                                <li>Error handling and optimization</li>
+                            </ul>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <span>GitHub Repository</span>
+                                <span class="link-icon">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employee Management System -->
+                <div class="project-card detailed" data-category="java web database">
+                    <div class="project-image">
+                        <div class="image-placeholder"><img src="images/emSystem.png" alt="Employee Management System"/></div>
+                        <div class="project-overlay">
+                            <div class="overlay-buttons">
+                                <button class="overlay-btn" onclick="openProjectModal('employee-management')">View Details</button>
+                                <a href="https://github.com/rootkill76/emsystem.git" class="overlay-btn">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">H2 Database</span>
+                            <span class="tag">REST API</span>
+                        </div>
+                        <h3>Employee Management System</h3>
+A lightweight and efficient Employee Management System built using Spring Boot, providing full CRUD functionality with a clean layered architecture. Designed for fast development, testing, and API-based integrations.                        <div class="project-features">
+                            <ul>
+                                <li>RESTful CRUD Operations for managing employee data</li>
+                                <li>Spring Boot Layered Architecture</li>
+                                <li>In-memory H2 Database Integration</li>
+                                <li>Input Validation & Error Handling</li>
+                                <li>Lightweight & Scalable Backend easily extendable to MySQL</li>
+                            </ul>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <span>Live Demo</span>
+                                <span class="link-icon">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Project Placeholder -->
+                <div class="project-card detailed" data-category="web">
+                    <div class="project-image">
+                        <div class="image-placeholder">Coming Soon</div>
+                        <div class="project-overlay">
+                            <div class="overlay-buttons">
+                                <button class="overlay-btn disabled">In Development</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack e-commerce solution with modern frontend and robust backend architecture. Currently in development phase.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>React frontend with modern UI</li>
+                                <li>Node.js backend API</li>
+                                <li>MongoDB database</li>
+                                <li>Payment gateway integration</li>
+                                <li>User authentication system</li>
+                            </ul>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link disabled">
+                                <span>Coming Soon</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <div class="modal" id="train-booking-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+            <h2>Train Ticket Booking System</h2>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <div class="image-placeholder">Project Screenshot</div>
+                </div>
+                <div class="modal-details">
+                    <h3>Project Overview</h3>
+                    <p>This project demonstrates advanced Java programming concepts through a real-time train ticket booking system. Built using socket programming, it handles multiple concurrent users while maintaining data integrity and system performance.</p>
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Real-time booking with instant updates</li>
+                        <li>Multi-threaded server handling concurrent requests</li>
+                        <li>Data synchronization across multiple clients</li>
+                        <li>Robust error handling and recovery</li>
+                        <li>Optimized performance for high-load scenarios</li>
+                    </ul>
+                    
+                    <h3>Technical Implementation</h3>
+                    <p>The system uses Java's socket programming capabilities to establish real-time communication between clients and server. Implemented thread pooling for efficient resource management and designed custom protocols for data exchange.</p>
+                    
+                    <h3>Challenges Solved</h3>
+                    <ul>
+                        <li>Race conditions in concurrent booking scenarios</li>
+                        <li>Network latency and connection management</li>
+                        <li>Data consistency across multiple client sessions</li>
+                        <li>System scalability and performance optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="employee-management-modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+        
+        <h2>Employee Management System</h2>
+
+        <div class="modal-body">
+            <div class="modal-image">
+                <div class="image-placeholder">
+                    <img src="/images/emSystem.png" alt="Employee Management System"/>
+                </div>
+            </div>
+
+            <div class="modal-details">
+
+                <h3>Project Overview</h3>
+                <p>
+                    A lightweight and efficient Employee Management System built using Spring Boot.
+                    It provides full CRUD operations, follows a clean layered architecture, and uses an
+                    in-memory H2 database for fast development and testing.
+                </p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>RESTful CRUD operations for employee management</li>
+                    <li>Spring Boot layered architecture (Controller → Service → Repository)</li>
+                    <li>In-memory H2 database integration</li>
+                    <li>Input validation using Jakarta Validation</li>
+                    <li>Global exception handling for consistent API errors</li>
+                </ul>
+
+                <h3>Technical Stack</h3>
+                <p>
+                    Developed using Spring Boot with a modular REST API structure.
+                    Uses H2 as the in-memory database, making it ideal for testing and rapid iteration.
+                    Easily extendable to MySQL, authentication, JWT, and frontend UIs.
+                </p>
+
+                <h3>Database Design</h3>
+                <ul>
+                    <li>Simple and clean Employee entity structure</li>
+                    <li>Auto-generated ID using JPA & Hibernate</li>
+                    <li>Validation constraints applied to maintain data consistency</li>
+                    <li>Designed for easy migration to SQL-based databases</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <span>Live Demo</span>
+                        <span class="link-icon">→</span>
+                    </a>
+                    <a href="#" class="project-link">
+                        <span>GitHub Repository</span>
+                        <span class="link-icon">→</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Working Together?</h2>
+                <p>I'm always excited to take on new challenges and collaborate on innovative projects. Let's discuss how we can build something amazing together.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+                    <a href="about.html" class="btn btn-outline">Learn More About Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Yash Prakash. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yash-prakash-8a2291253" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="mailto:sudonot.root@gmail.com" class="social-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
